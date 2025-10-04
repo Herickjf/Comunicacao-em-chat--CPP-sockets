@@ -1,0 +1,39 @@
+[37m[2m[21:34:36][0m - [36m[INFO][0m - [ChatClient] - Iniciando cliente como: Alice
+[37m[2m[21:34:36][0m - [36m[INFO][0m - [Connection] - Conectando ao servidor: 127.0.0.1:8080
+[37m[2m[21:34:36][0m - [32m[SUCCESS][0m - [Connection] - Conectado ao servidor 127.0.0.1:8080
+[37m[2m[21:34:36][0m - [36m[INFO][0m - [ChatClient] - Iniciando comunicação...
+💬 Conectado como: Alice
+📝 Digite suas mensagens ou comandos:
+> 
+==================================================
+           GRUPOS DISPONÍVEIS
+==================================================
+[1] Geral | 👥 0 | 💬 0
+[2] Desenvolvimento | 👥 0 | 💬 0
+[3] Suporte | 👥 0 | 💬 0
+[4] Vendas | 👥 0 | 💬 0
+[5] Marketing | 👥 0 | 💬 0
+==================================================
+Comandos disponíveis:
+  /list - Ver grupos novamente
+  /quit - Sair do servidor
+==================================================
+Digite o número do grupo que deseja entrar (1-5): > 
+========================================
+       GRUPO: Geral
+========================================
+👥 Clientes conectados (2):
+  • Bob (127.0.0.1)
+  • Alice (127.0.0.1)
+========================================
+💬 Comandos disponíveis:
+  /info - Ver informações do grupo
+  /list - Ver outros grupos
+  /quit - Sair do grupo
+========================================
+Digite sua mensagem:
+> > [Bob]: Oi Alice!
+> [Bob]: Estou aqui também!
+> [Bob]: Tudo bem por aqui!
+👋 [SERVIDOR] Alice saiu do grupo
+[37m[2m[21:34:45][0m - [36m[INFO][0m - [ChatClient] - Cliente desconectado

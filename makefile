@@ -1,24 +1,19 @@
 CXX = g++
-CXXFLAGS = -std=c++11 -pthread -fsanitize=address -g
-INCLUDES = -I./libs
+CXXFLAGS = -std=c++11 -pthread -Wall -Wextra -I.
+BINDIR = bin
 
-SRCDIR = server
-BINDIR = $(SRCDIR)
-TARGET = $(BINDIR)/server
+all: $(BINDIR) server client
 
-SRC = $(SRCDIR)/server.cpp
-OBJ = $(SRC:.cpp=.o)
+$(BINDIR):
+	mkdir -p $(BINDIR)
 
-all: $(TARGET)
+server: server.cpp libs/libtslog.hpp libs/chat_group.hpp libs/client_info.hpp libs/ticketLock.hpp libs/colors.hpp
+	$(CXX) $(CXXFLAGS) -o $(BINDIR)/server server.cpp
 
-$(TARGET): $(OBJ)
-	$(CXX) $(CXXFLAGS) -o $@ $^
-
-$(SRCDIR)/%.o: $(SRCDIR)/%.cpp
-	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
-
-run: $(TARGET)
-	./$(TARGET)
+client: client.cpp libs/libtslog.hpp libs/colors.hpp
+	$(CXX) $(CXXFLAGS) -o $(BINDIR)/client client.cpp
 
 clean:
-	rm -f $(SRCDIR)/*.o $(TARGET)
+	rm -rf $(BINDIR)
+
+.PHONY: all clean
