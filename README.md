@@ -37,3 +37,6 @@ Projeto Final da disciplina de Programação Concorrente e Distribuída, orienta
         chmod +x test_script.sh
         ./test_script.sh
         ```
+
+3. `v3-final` - `03/10/25`
+Ajustes finais no `servidor`-`cliente`, criação de um [relatório](./relatorio.md) detalhado sobre o funcionamento do projeto e a aplciação das ideias propostas na v1, analisando se foi tudo concluído adequadamente, verificando o fluxo de funcionamento e explicitando o diagrama de sequência.
